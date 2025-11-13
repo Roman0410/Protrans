@@ -1,0 +1,133 @@
+.footer {
+  background: #1f2937;
+  color: #fff;
+  padding: 60px 0 20px;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &::before {
+      left: 25%;
+    }
+
+    &::after {
+      left: 75%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 32px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #d1d5db;
+    line-height: 1.4;
+    img {
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+    }
+
+    span {
+      color: #d1d5db;
+    }
+    a {
+      color: #d1d5db;
+      &:hover {
+        color: var(--light-green);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--grey-blue);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--light-green);
+    }
+
+    img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0;
+  }
+}
