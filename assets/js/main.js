@@ -17,6 +17,20 @@ $('.mobile-btn').click(function () {
   $('.header-links').toggleClass('active');
   $('body').removeClass('lock');
 });
+$(window).on('load', function () {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+      offset: 100,
+      delay: 0,
+      anchorPlacement: 'top-bottom',
+    });
+  } else {
+    $('body').addClass('aos-not-loaded');
+  }
+});
 
 // Header scroll handler - працює на всіх сторінках
 function handleHeaderScroll() {

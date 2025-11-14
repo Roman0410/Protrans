@@ -1221,8 +1221,11 @@ section .back-title {
 }
 .about-us .img-card .about-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .about-us .about-text {
   width: 60%;
