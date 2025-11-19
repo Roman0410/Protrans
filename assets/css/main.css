@@ -998,7 +998,7 @@ section .back-title {
      object-position: center;
 }
 .hero .wrapper {
-  background-color: rgba(2, 2, 2, 0.3137254902);
+  background-color: rgba(2, 2, 2, 0.6980392157);
   position: absolute;
   top: 0;
   height: 100%;
@@ -2168,6 +2168,56 @@ section .back-title {
   margin-top: 4px;
   font-size: 13px;
 }
+.contactUs .contactForm .phoneInput {
+  padding-left: 52px !important;
+}
+.contactUs .contactForm .iti {
+  width: 100%;
+  display: block;
+}
+.contactUs .contactForm .iti .iti__flag-container {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+}
+.contactUs .contactForm .iti .iti__selected-flag {
+  padding: 0 8px;
+  border-bottom: 1px solid #999;
+  background-color: transparent;
+}
+.contactUs .contactForm .iti .iti__selected-flag:hover {
+  background-color: transparent;
+}
+.contactUs .contactForm .iti .iti__selected-flag:focus {
+  outline: none;
+}
+.contactUs .contactForm .iti .iti__flag {
+  margin-right: 8px;
+}
+.contactUs .contactForm .iti .iti__arrow {
+  border-top: 4px solid #999;
+  margin-left: 6px;
+}
+.contactUs .contactForm .iti .iti__country-list {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.contactUs .contactForm .iti .iti__country-list .iti__country {
+  padding: 8px 12px;
+}
+.contactUs .contactForm .iti .iti__country-list .iti__country.iti__highlight {
+  background-color: #f0f0f0;
+}
+.contactUs .contactForm .iti input {
+  padding-left: 52px !important;
+}
 .contactUs .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2184,9 +2234,13 @@ section .back-title {
 }
 .contactUs .row .input-wrapper {
   width: 100%;
+  position: relative;
 }
 .contactUs .row input {
   width: 100%;
+}
+.contactUs .input-wrapper {
+  position: relative;
 }
 .contactUs .btn {
   width: 100%;

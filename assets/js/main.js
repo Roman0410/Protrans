@@ -147,42 +147,27 @@ $(document).ready(function () {
     });
   }
 
-  // Phone mask
+  // Phone input with intl-tel-input
   const phoneInput = document.getElementById('tel');
-  if (phoneInput) {
-    phoneInput.addEventListener('input', function (e) {
-      let value = e.target.value.replace(/\D/g, '');
-
-      // Якщо починається з 0, замінюємо на +380
-      if (value.startsWith('0')) {
-        value = '380' + value.substring(1);
-      }
-
-      // Обмежуємо до 12 цифр (380 + 9 цифр)
-      if (value.length > 12) {
-        value = value.substring(0, 12);
-      }
-
-      // Форматуємо: +380 (xx) xxx-xx-xx
-      let formatted = '';
-      if (value.length > 0) {
-        formatted = '+380';
-        if (value.length > 3) {
-          formatted += ' (' + value.substring(3, 5);
-          if (value.length > 5) {
-            formatted += ') ' + value.substring(5, 8);
-            if (value.length > 8) {
-              formatted += '-' + value.substring(8, 10);
-              if (value.length > 10) {
-                formatted += '-' + value.substring(10, 12);
-              }
-            }
-          }
-        }
-      }
-
-      e.target.value = formatted;
+  let iti;
+  if (phoneInput && window.intlTelInput) {
+    // Ініціалізуємо intl-tel-input
+    iti = window.intlTelInput(phoneInput, {
+      initialCountry: 'auto', // Автоматичне визначення країни за IP
+      preferredCountries: ['ua', 'pl', 'gb', 'us'], // Пріоритетні країни (ua, pl, en)
+      autoPlaceholder: 'aggressive', // Автоматичний placeholder
+      formatOnDisplay: true, // Форматування при введенні
+      separateDialCode: false, // Не відокремлювати код країни
+      utilsScript:
+        'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.0/js/utils.js', // Для валідації та форматування
     });
+
+    // Якщо автоматичне визначення не спрацювало, встановлюємо UA за замовчуванням
+    setTimeout(() => {
+      if (!iti.getSelectedCountryData().iso2) {
+        iti.setCountry('ua');
+      }
+    }, 1000);
   }
 
   // Form validation and email sending
@@ -214,8 +199,15 @@ $(document).ready(function () {
           errorMessage: "Телефон обов'язковий для заповнення",
         },
         {
-          rule: 'customRegexp',
-          value: /^(\+380|380|0)?\s?\(?\d{2}\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}$/,
+          rule: 'custom',
+          validator: function () {
+            if (!iti || !phoneInput) return false;
+            // Перевіряємо, чи введено хоча б одну цифру
+            const value = phoneInput.value.replace(/\D/g, '');
+            if (value.length < 4) return false;
+            // Використовуємо валідацію intl-tel-input
+            return iti.isValidNumber();
+          },
           errorMessage: 'Введіть коректний номер телефону',
         },
       ])
@@ -240,6 +232,13 @@ $(document).ready(function () {
 
         // Отримуємо дані форми
         const formData = new FormData(contactForm);
+
+        // Якщо використовується intl-tel-input, отримуємо номер в міжнародному форматі
+        if (iti && phoneInput) {
+          const phoneNumber = iti.getNumber();
+          formData.set('phone', phoneNumber); // Замінюємо номер на міжнародний формат
+        }
+
         const formAction = contactForm.getAttribute('action');
 
         // Відправка через FormSubmit (AJAX)
@@ -250,8 +249,22 @@ $(document).ready(function () {
             Accept: 'application/json',
           },
         })
-          .then((response) => {
+          .then(async (response) => {
+            // FormSubmit повертає 200 OK при успішній відправці
             if (response.ok) {
+              try {
+                const data = await response.json();
+                // Перевіряємо, чи є помилка в відповіді
+                if (data.error) {
+                  throw new Error(data.message || 'Помилка відправки');
+                }
+              } catch (e) {
+                // Якщо не JSON або інша помилка, але response.ok = true, значить відправка успішна
+                if (e.name !== 'SyntaxError') {
+                  throw e;
+                }
+              }
+
               // Успішна відправка
               submitButton.textContent = 'Відправлено!';
               submitButton.style.backgroundColor = '#4caf50';
@@ -259,7 +272,9 @@ $(document).ready(function () {
               validation.refresh();
 
               // Показуємо повідомлення про успіх
-              alert('Дякуємо! Ваше повідомлення успішно відправлено.');
+              alert(
+                "Дякуємо! Ваше повідомлення успішно відправлено. Ми зв'яжемося з вами найближчим часом."
+              );
 
               // Повертаємо кнопку в початковий стан через 3 секунди
               setTimeout(() => {
@@ -268,7 +283,9 @@ $(document).ready(function () {
                 submitButton.style.backgroundColor = '';
               }, 3000);
             } else {
-              throw new Error('Помилка відправки');
+              // Якщо response не ok, намагаємося отримати деталі помилки
+              const errorData = await response.json().catch(() => ({}));
+              throw new Error(errorData.message || 'Помилка відправки');
             }
           })
           .catch((error) => {
@@ -278,7 +295,7 @@ $(document).ready(function () {
             submitButton.style.backgroundColor = '#f44336';
 
             alert(
-              'Вибачте, сталася помилка при відправці повідомлення. Спробуйте ще раз або зателефонуйте нам.'
+              'Вибачте, сталася помилка при відправці повідомлення. Спробуйте ще раз або зателефонуйте нам за номером +380 (73) 333 75 56.'
             );
 
             // Повертаємо кнопку в початковий стан через 3 секунди

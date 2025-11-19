@@ -16,7 +16,7 @@
     }
   }
   .wrapper {
-    background-color: #02020250;
+    background-color: #020202b2;
     position: absolute;
     top: 0;
     height: 100%;
@@ -1007,6 +1007,67 @@
       margin-top: 4px;
       font-size: 13px;
     }
+
+    // Стилі для intl-tel-input
+    .phoneInput {
+      padding-left: 52px !important; // Місце для прапорця країни
+    }
+
+    .iti {
+      width: 100%;
+      display: block;
+
+      .iti__flag-container {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+
+      .iti__selected-flag {
+        padding: 0 8px;
+        border-bottom: 1px solid #999;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .iti__flag {
+        margin-right: 8px;
+      }
+
+      .iti__arrow {
+        border-top: 4px solid #999;
+        margin-left: 6px;
+      }
+
+      .iti__country-list {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        max-height: 200px;
+        overflow-y: auto;
+
+        .iti__country {
+          padding: 8px 12px;
+
+          &.iti__highlight {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+
+      input {
+        padding-left: 52px !important;
+      }
+    }
   }
 
   .row {
@@ -1017,10 +1078,15 @@
     }
     .input-wrapper {
       width: 100%;
+      position: relative; // Для правильного позиціонування прапорця країни
     }
     input {
       width: 100%;
     }
+  }
+
+  .input-wrapper {
+    position: relative; // Для правильного позиціонування прапорця країни
   }
   .btn {
     width: 100%;
