@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.0/css/intlTelInput.css"
+    />
+    <link
       rel="shortcut icon"
       href="../assets/img/Favicon.png"
       type="image/x-icon"
@@ -462,9 +466,7 @@
             </div>
             <div class="process-card" data-process-content="4">
               <span class="process-card-number">04</span>
-              <h3 class="process-card-title">
-                Фінальний результат та підтримка
-              </h3>
+              <h3 class="process-card-title">Фінальний результат</h3>
               <p class="process-card-text">
                 Підбиваємо підсумки виконаної роботи, надаємо повний пакет
                 фінальних документів і забезпечуємо подальший супровід.
@@ -540,7 +542,25 @@
       </div>
       <div class="right">
         <h2 class="section-title">Залиште заявку</h2>
-        <form action="" class="contactForm" id="main-form">
+        <form
+          action="https://formsubmit.co/info@protranscargo.eu"
+          method="POST"
+          class="contactForm"
+          id="main-form"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Нове повідомлення з сайту ProTrans Cargo"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Дякуємо за ваше повідомлення! Ми зв'яжемося з вами найближчим часом."
+          />
           <div class="row">
             <div class="input-wrapper">
               <input
@@ -565,15 +585,22 @@
           <div class="input-wrapper">
             <input
               id="email"
+              name="email"
               class="input"
               autocomplete="off"
-              type="text"
+              type="email"
               placeholder="Електронна пошта*"
+              required
             />
           </div>
 
           <div class="input-wrapper">
-            <input type="text" placeholder="Повідомлення" />
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Повідомлення"
+            />
           </div>
           <button class="btn" type="submit">Надіслати</button>
         </form>
@@ -655,6 +682,7 @@
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/count.js"></script>
     <script src="../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.0/js/intlTelInput.min.js"></script>
     <script src="../assets/js/just-validate.production.min.js"></script>
     <script src="../assets/js/fancybox.umd.js"></script>
     <script src="../assets/js/main.js"></script>
