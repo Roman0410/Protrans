@@ -1862,8 +1862,6 @@ section .back-title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   .cta-section .cta-buttons {
@@ -1882,6 +1880,7 @@ section .back-title {
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  width: 50%;
 }
 @media screen and (max-width: 768px) {
   .cta-section .cta-buttons .btn {

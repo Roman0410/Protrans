@@ -760,7 +760,6 @@
     display: flex;
     gap: 24px;
     justify-content: center;
-    flex-wrap: wrap;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -774,7 +773,7 @@
       transition: all 0.3s ease;
       text-decoration: none;
       display: inline-block;
-
+      width: 50%;
       @media screen and (max-width: 768px) {
         width: 100%;
         padding: 14px 32px;

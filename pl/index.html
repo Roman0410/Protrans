@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProTrans Cargo</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.0/css/intlTelInput.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/Favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="left">
+            <a href="./" class="header-logo">
+              <img src="../assets/img/logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="right">
+            <div class="header-links">
+              <nav class="nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="./" class="nav-link">Strona główna</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#why-Us" class="nav-link">Zalety</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#aboutUs" class="nav-link">O nas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#services" class="nav-link">Usługi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#processes" class="nav-link">Procesy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="nav-link">Kontakt</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="language-selector">
+                <button class="language-btn" type="button">
+                  <span class="current-lang">PL</span>
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L6 6L11 1"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <ul class="language-list">
+                  <li class="language-item">
+                    <a href="/ua/" class="language-link">UA</a>
+                  </li>
+                  <li class="language-item">
+                    <a href="/en/" class="language-link">EN</a>
+                  </li>
+                  <li class="language-item">
+                    <a href="/pl/" class="language-link active">PL</a>
+                  </li>
+                </ul>
+              </div>
+              <a href="./contact.html#contact" class="btn"
+                >Skontaktuj się z nami</a
+              >
+              <div class="mobile-nav">
+                <ul class="nav-list">
+                  <li class="nav-item">
+                    <a href="#why-Us" class="nav-link">Nasze zalety</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#aboutUs" class="nav-link">O nas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#services" class="nav-link">Nasze usługi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#processes" class="nav-link">Nasze procesy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./contact.html" class="nav-link">Kontakt</a>
+                  </li>
+                </ul>
+                <div class="mobile-language">
+                  <div class="language-selector mobile">
+                    <button class="language-btn" type="button">
+                      <span class="current-lang">PL</span>
+                      <svg
+                        width="12"
+                        height="8"
+                        viewBox="0 0 12 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 1L6 6L11 1"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="language-list">
+                      <li class="language-item">
+                        <a href="/ua/" class="language-link">UA</a>
+                      </li>
+                      <li class="language-item">
+                        <a href="/en/" class="language-link">EN</a>
+                      </li>
+                      <li class="language-item">
+                        <a href="/pl/" class="language-link active">PL</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="burger-menu">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="back-video">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          webkit-playsinline
+          preload="auto"
+        >
+          <source src="../assets/img/1119.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="wrapper">
+        <div class="container">
+          <div class="card" data-aos="fade-left" data-aos-duration="1500">
+            <h1 class="hero-title">Zapewniamy płynność Twojego biznesu</h1>
+            <p class="hero-subtitle">Łączymy firmy, kraje i ludzi</p>
+            <p class="benefits">
+              Efektywność | Niezawodność | Zasięg europejski
+            </p>
+            <div class="buttons">
+              <a href="" class="btn white">Skontaktuj się z nami</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages" id="why-Us">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down" data-aos-duration="1500">
+          Nasze zalety
+        </h2>
+        <div class="advantages-grid">
+          <div
+            class="advantage-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <h3 class="advantage-title">Szybka dostawa</h3>
+            <p class="advantage-description">
+              Gwarantujemy szybką i niezawodną dostawę towarów na terenie całej
+              Unii Europejskiej, z zachowaniem terminów.
+            </p>
+          </div>
+          <div
+            class="advantage-item"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
+            <h3 class="advantage-title">Niezawodność</h3>
+            <p class="advantage-description">
+              Ponad 10 lat doświadczenia w branży logistycznej oraz tysiące
+              zadowolonych klientów w całej Unii.
+            </p>
+          </div>
+          <div
+            class="advantage-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <h3 class="advantage-title">Konkurencyjne ceny</h3>
+            <p class="advantage-description">
+              Przejrzyste i konkurencyjne stawki bez ukrytych opłat. Idealne
+              dopasowanie ceny do jakości.
+            </p>
+          </div>
+          <div
+            class="advantage-item"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
+            <h3 class="advantage-title">Indywidualne podejście</h3>
+            <p class="advantage-description">
+              Każdy klient otrzymuje rozwiązanie dopasowane do jego potrzeb
+              logistycznych.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us" id="aboutUs">
+      <div class="container">
+        <div class="about-content">
+          <div class="img-card" data-aos="fade-right" data-aos-duration="1200">
+            <img
+              src="../assets/img/pageHero.jpg"
+              alt="O nas - ProTrans Cargo"
+              class="about-img"
+            />
+          </div>
+          <div class="about-text">
+            <h2
+              class="section-title"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
+              O nas
+            </h2>
+            <h3
+              class="about-subtitle"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
+              Twój rzetelny partner logistyczny
+            </h3>
+            <p
+              class="about-description"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
+              ProTrans Cargo to nowoczesna firma logistyczna z wieloletnim
+              doświadczeniem na rynku europejskim. Specjalizujemy się w
+              międzynarodowym transporcie towarów oraz oferujemy kompleksową
+              obsługę celną i logistyczną dla firm każdej wielkości.
+            </p>
+            <p
+              class="about-description"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
+              Nasz zespół profesjonalistów zapewnia szybką, bezpieczną i
+              efektywną dostawę na terenie całej Europy. Pracujemy z nowoczesną
+              flotą oraz korzystamy z innowacyjnych technologii do monitorowania
+              i zarządzania ładunkami.
+            </p>
+
+            <div
+              class="expirience-list"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="expirience-item">
+                <div class="number num">
+                  <p class="num count">150</p>
+                  k +
+                </div>
+                <p class="text">Ton przetransportowanych towarów</p>
+              </div>
+              <div class="expirience-item">
+                <div class="number num">
+                  <p class="num count">15</p>
+                  +
+                </div>
+                <p class="text">Lat doświadczenia</p>
+              </div>
+
+              <div class="expirience-item">
+                <div class="number num">
+                  <p class="num count">10</p>
+                  k
+                </div>
+                <p class="text">Odpraw celnych</p>
+              </div>
+              <div class="expirience-item">
+                <div class="number num">
+                  <p class="num count">1000</p>
+                  +
+                </div>
+                <p class="text">Zadowolonych klientów</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1500">
+          Nasze usługi
+        </h2>
+        <div class="services-list">
+          <div
+            class="services-item"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <img
+              src="../assets/img/service-1.jpg"
+              alt="Międzynarodowy transport towarów"
+              class="service-img"
+            />
+            <div class="card">
+              <h3 class="service-title">Międzynarodowy transport towarów</h3>
+              <p class="service-description">
+                Zapewniamy niezawodny transport ładunków w całej Europie —
+                szybko, bezpiecznie i zgodnie z przepisami.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="services-item"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <img
+              src="../assets/img/service-2.jpg"
+              alt="Logistyka magazynowa i odprawa celna"
+              class="service-img"
+            />
+            <div class="card">
+              <h3 class="service-title">
+                Logistyka magazynowa i odprawa celna
+              </h3>
+              <p class="service-description">
+                Oferujemy pełen zakres usług magazynowych oraz obsługę celną.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="services-item"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <img
+              src="../assets/img/service-3.jpg"
+              alt="Obsługa spedycyjna"
+              class="service-img"
+            />
+            <div class="card">
+              <h3 class="service-title">Obsługa spedycyjna</h3>
+              <p class="service-description">
+                Organizujemy cały proces transportu — od planowania trasy i
+                wyboru pojazdu do kontroli dostawy i monitoringu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="processes" id="processes">
+      <div class="container">
+        <h2
+          class="section-title reverse"
+          data-aos="fade-left"
+          data-aos-duration="1600"
+        >
+          Nasze procesy
+        </h2>
+        <div class="processes-content">
+          <div class="processes-steps">
+            <button
+              class="process-step active"
+              data-process="1"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+            >
+              <span class="process-step-number">01</span>
+              <span class="process-step-title">Analiza wniosku</span>
+            </button>
+            <button
+              class="process-step"
+              data-process="2"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+            >
+              <span class="process-step-number">02</span>
+              <span class="process-step-title">Planowanie trasy</span>
+            </button>
+            <button
+              class="process-step"
+              data-process="3"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+            >
+              <span class="process-step-number">03</span>
+              <span class="process-step-title">Obsługa dokumentów</span>
+            </button>
+            <button
+              class="process-step"
+              data-process="4"
+              data-aos="fade-right"
+              data-aos-duration="1600"
+            >
+              <span class="process-step-number">04</span>
+              <span class="process-step-title">Podsumowanie</span>
+            </button>
+          </div>
+          <div
+            class="processes-details"
+            data-aos="fade-left"
+            data-aos-duration="1600"
+          >
+            <div class="process-card active" data-process-content="1">
+              <span class="process-card-number">01</span>
+              <h3 class="process-card-title">Analiza wniosku</h3>
+              <p class="process-card-text">
+                Ustalamy parametry ładunku, terminy, budżet oraz wymagania
+                klienta. Przygotowujemy kilka możliwych rozwiązań.
+              </p>
+            </div>
+            <div class="process-card" data-process-content="2">
+              <span class="process-card-number">02</span>
+              <h3 class="process-card-title">Planowanie trasy</h3>
+              <p class="process-card-text">
+                Wybieramy najbardziej efektywny sposób dostawy, uwzględniając
+                czas, rodzaj ładunku i budżet. Tworzymy optymalną trasę i
+                przygotowujemy dokumenty.
+              </p>
+            </div>
+            <div class="process-card" data-process-content="3">
+              <span class="process-card-number">03</span>
+              <h3 class="process-card-title">Obsługa dokumentów</h3>
+              <p class="process-card-text">
+                Zapewniamy kompletny zestaw dokumentów: umowy, listy przewozowe,
+                pozwolenia, ubezpieczenia i inne formalności. Dbamy o poprawność
+                i realizację.
+              </p>
+            </div>
+            <div class="process-card" data-process-content="4">
+              <span class="process-card-number">04</span>
+              <h3 class="process-card-title">Podsumowanie</h3>
+              <p class="process-card-text">
+                Podsumowujemy wykonaną pracę, przekazujemy pełen zestaw
+                dokumentów końcowych oraz zapewniamy dalsze wsparcie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content" data-aos="fade-up" data-aos-duration="1600">
+          <h2 class="cta-title">Gotowi do współpracy?</h2>
+          <p class="cta-description">
+            Skontaktuj się z nami już dziś i otrzymaj indywidualne rozwiązanie
+            logistyczne.
+          </p>
+          <div class="cta-buttons">
+            <a href="./contact.html#contact" class="btn cta-btn-primary"
+              >Zostaw wiadomość</a
+            >
+            <a href="tel:+380733337551" class="btn cta-btn-secondary"
+              >Zadzwoń</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="certificates">
+      <div class="container">
+        <h2 class="section-title">Osiągnięcia</h2>
+        <div class="certificates-slider">
+          <div class="certificate-item">
+            <img src="../assets/img/firma.svg" alt="Sertyfikat 1" />
+          </div>
+          <div class="certificate-item">
+            <img
+              src="../assets/img/logo-progress-project.jpg"
+              alt="Sertyfikat 1"
+            />
+          </div>
+          <div class="certificate-item">
+            <img src="../assets/img/jgt.jpg" alt="Rzetelna Firma Logo" />
+          </div>
+          <div class="certificate-item">
+            <img src="../assets/img/IRU_Logo.png" alt="IRU Logo" />
+          </div>
+          <div class="certificate-item">
+            <img src="../assets/img/apmp-logo.png" alt="ASK Logo" />
+          </div>
+          <div class="certificate-item">
+            <img
+              src="../assets/img/kaczmarski-logo.svg"
+              alt="Kaczmarski Logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contactUs">
+      <div class="left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.410945736765!2d21.969692877207702!3d50.02239507151362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfbbbce8eeaa7%3A0x87f01c762ea1f802!2sPrzemys%C5%82owa%205%2C%2035-105%20Rzesz%C3%B3w!5e0!3m2!1suk!2spl!4v1762979975841!5m2!1suk!2spl"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="right">
+        <h2 class="section-title">Zostaw wiadomość</h2>
+        <form
+          action="https://formsubmit.co/info@protranscargo.eu"
+          method="POST"
+          class="contactForm"
+          id="main-form"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nowe wiadomość z serwisu ProTrans Cargo"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Dziękujemy za Twoją wiadomość! Skontaktujemy się z Tobą najbliższym czasem."
+          />
+          <div class="row">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                placeholder="Imię*"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="tel"
+                name="phone"
+                id="tel"
+                class="phoneInput"
+                required
+                placeholder="+48 (xx) xxx-xx-xx*"
+              />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <input
+              id="email"
+              name="email"
+              class="input"
+              autocomplete="off"
+              type="email"
+              placeholder="Email*"
+              required
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Wiadomość"
+            />
+          </div>
+          <button class="btn" type="submit">Wyślij</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3 class="footer-title">Lokalizacja</h3>
+            <div class="footer-info">
+              <div class="info-item">
+                <a
+                  href="https://maps.app.goo.gl/khotcdv5UAZpTdrf6"
+                  target="_blank"
+                  >Rzeszów, ul. Prochowa 5</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Harmonogram pracy</h3>
+            <div class="footer-info">
+              <div class="info-item">
+                <span>Pon - Pią: 9:00 - 18:00</span>
+              </div>
+              <div class="info-item">
+                <span>Sob: 9:00 - 15:00</span>
+              </div>
+              <div class="info-item">
+                <span>Nd: weekend</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Zadzwoń</h3>
+            <div class="footer-info">
+              <div class="info-item">
+                <a
+                  href="tel:380733337551"
+                  class="js-contact-phone"
+                  data-contact="phone"
+                  >+48 (73) 333 75 51</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Napisz</h3>
+            <div class="footer-info">
+              <div class="info-item">
+                <a href="mailto:info@protranscargo.eu">info@protranscargo.eu</a>
+              </div>
+              <div class="social-media">
+                <a href="#" class="social-link">
+                  <img src="../assets/img/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="#" class="social-link">
+                  <img src="../assets/img/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="#" class="social-link">
+                  <img src="../assets/img/tiktok.svg" alt="TikTok" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">
+            © <span id="current-year">2025</span> ProTrans Cargo. Wszystkie
+            prawa chronione.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/count.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/20.1.0/js/intlTelInput.min.js"></script>
+    <script src="../assets/js/just-validate.production.min.js"></script>
+    <script src="../assets/js/fancybox.umd.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
